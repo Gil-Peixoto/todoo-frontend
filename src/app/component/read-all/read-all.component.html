@@ -1,0 +1,31 @@
+<div class="container">
+    <button class="novo-todoo mat-elevation-z8" mat-stroked-button color="primary">NOVO TODOO</button>
+
+    <div class="content" *ngFor="let item of list">
+        <mat-card class="mat-elevation-z8">
+            <p>Data para finalizar: {{ item.dataParaFinalizar }} </p>
+            <mat-card-header>
+              <mat-card-title><b>{{ item.titulo }}</b></mat-card-title>
+              <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
+            </mat-card-header> 
+            
+            <div class="actions">
+                <div class="btn1">
+                     <button mat-mini-fab color="primary">
+                         <mat-icon>done</mat-icon>
+                     </button>
+                 </div>
+                 <div class="btn2">
+                     <button mat-mini-fab color="accent">
+                         <mat-icon>edit</mat-icon>
+                     </button>
+                 </div>
+                 <div class="btn3">
+                     <button mat-mini-fab color="warn">
+                         <mat-icon>delete</mat-icon>
+                     </button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

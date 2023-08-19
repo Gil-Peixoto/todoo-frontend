@@ -5,6 +5,8 @@ img {
 .header {
     justify-content: center;
     height: 10%;
+    background: rgb(238, 236, 236);
+    box-shadow: 0 0 10px 0px #555;
 }
 
 span {

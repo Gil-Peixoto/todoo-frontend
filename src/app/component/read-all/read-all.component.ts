@@ -9,19 +9,29 @@ import { TodooService } from 'src/app/services/todoo.service';
 })
 export class ReadAllComponent implements OnInit {
 
-  list: Todoo[] = []
+  closed = 0;
+
+  list: Todoo[] = [];
+  listfinished: Todoo[] = [];
 
   constructor(private service: TodooService) { }
 
   ngOnInit(): void {
     this.findAll();
-      
   }
 
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
-      this.list = resposta;
+      resposta.forEach(todoo => {
+        if(todoo.finalizado) {
+          this.listfinished.push(todoo);
+        } else {
+          this.list.push(todoo);
+        }
+      })
+      this.closed = this.listfinished.length
     })
   }
+
 
 }

@@ -2,6 +2,18 @@
     width: 85%;
     margin: auto;
 }
+
+.badge {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge button {
+    margin: auto;
+    width: 50%;
+}
 .content {
     width: 100%;
     background: rgb(238, 236, 236);
@@ -11,7 +23,9 @@
 .novo-todoo {
     width: 100% ;
     margin-top: 3rem;
+    display: flex;
     box-shadow: 0 0 10px 0px #555;
+    background-color: rgb(36, 245, 99);
 }
 
 mat-card {

@@ -1,5 +1,8 @@
 <div class="container">
-    <button class="novo-todoo mat-elevation-z8" mat-stroked-button color="primary">NOVO TODOO</button>
+    <div class="badge">
+        <button mat-stroked-button color="primary" matBadge="{{ closed }}">Tasks finalizadas </button>
+    </div>
+    <button class="novo-todoo" mat-stroked-button color="primary">NOVO TODOO</button>
 
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8">
